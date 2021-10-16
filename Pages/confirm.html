@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangalore School - Confirm</title>
+</head>
+<body>
+    <nav>
+        <a href="Index.html">Home</a>&nbsp;
+        <a href="Admission.html">Admission Form</a>&nbsp;
+    </nav>
+    <br />
+    Admission information is gathered now for <b><label id="name"></label></b>
+    <br />
+    <br />
+    <i> Thanks you for the interest!</i>
+</body>
+</html>
+<script>
+    window.onload = function () {
+        var queryInfo = window.location.href.split("?")[1];
+        var firstpair = queryInfo.split("&")[0];
+        var firstpairvalue = firstpair.split("=")[1];
+        document.getElementById("name").innerText = firstpairvalue.replace("+", " ");
+    }
+</script>
