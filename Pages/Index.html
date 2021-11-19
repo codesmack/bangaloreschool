@@ -6,18 +6,50 @@
         Bangalore City School
     </title>
 </head>
+
 <body>
-    <nav>
-        <a href="Admission.html">Admission Form</a>&nbsp;
-    </nav>
     <center>
         <h1>Bangalore City School</h1>
-        <img width="650px" height="150px" src="../images/school.jfif"></img>
+        <img width="650px" height="150px" src="school.jfif"></img>
         <br />
         <br />
         <br />
         <label>Admission open :</label> <b>01/06/2022</b>
     </center>
+    <div id="popup" style="background-color: rgba(250, 240, 240, 0.973);
+   
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0.98;">
+        <div style="position: relative;top:20%;width:450px;margin: auto;border: 1px solid black;">
+            <div style="text-align: start;padding: 10px;background-color: chocolate;cursor: pointer;">
+                Bangalore City School
+                <span style="position: absolute;right: 10px;">x</span></div>
+            <h1>Hello, Please Subscribe to our newsletter</h1>
+            <p>
+            <form method="post" action="index.html">
+                Email ID - <input type="text" required data-val-message="Enter info.">
+                <button onclick="return hidePopup();" >Subscribe</button>
+            </form>
+            </p>
+            <a href="#" onclick="hidePopup()">No Thanks</a>
+        </div>
+
+    </div>
 </body>
 
 </html>
+<script>
+    function hidePopup() {
+        var isValidForm = document.forms[0].checkValidity();
+        if(isValidForm)
+        {
+            document.getElementById("popup").style.display = "none";
+            return false;   
+        }
+    }
+</script>

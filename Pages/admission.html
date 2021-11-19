@@ -6,68 +6,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bangalore School - Admission Form</title>
-
-    <style>
-        .divBorder
-        {
-            border: 1px solid green;
-        }
-
-    </style>
-
 </head>
 
 <body>
-    <nav>
-        <a href="Index.html">Home</a>&nbsp;
-    </nav>
-   
-    <div class="divBorder">
+    <h1>Admisssion Form 2021</h1>
+    <form action="Index.html">
+        <table>
+            <tr>
+                <td>
+                    <label for="">Student Name  : </label>
+                </td>
+                <td>
+                    <input name="student_name" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Student Age  : </label>
+                </td>
+                <td>
+                    <input name="student_age" type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="">Student Gender  : </label>
+                </td>
+                <td>
+                    <input type="radio" name="Gender" value="0">Male
+                    <input type="radio" name="Gender" value="1">Female
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                    <input type="submit">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
 
-        <h1>Admisssion Form 2021</h1>
-        <form action="confirm.html" method="get">
-            <table>
-                <tr>
-                    <td>
-                        <label for="student_name">Student Name  : </label>
-                    </td>
-                    <td>
-                        <input name="student_name" type="text">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="student_age">Student Age  : </label>
-                    </td>
-                    <td>
-                        <input min="1" name="student_age" type="number">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="Gender">Student Gender  : </label>
-                    </td>
-                    <td>
-                        <input type="radio" name="Gender" checked value="0">Male
-                        <input type="radio" name="Gender" value="1">Female
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                    <td>
-                        <input type="submit">
-                        <input type="reset">
-                    </td>
-                </tr>
-            </table>
-    
-        </form>
-    
+    </form>
 
-    </div>
-
- 
 
 </body>
 
