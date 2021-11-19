@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout - Style Two</title>
+    <style>
+        html, body{
+            margin: 0;
+            height: 100%;
+        }
+        .topBar
+        {
+            background-color: antiquewhite;
+            height: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        ul 
+        {
+            padding: 0;
+            margin: 0px;
+        }
+
+        li {
+            list-style-type: none;
+            display: inline;
+        }
+
+        .topBarLinks
+        {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .topBarLinks:hover
+        {
+            background-color: tomato;
+            /* property | duration | delay */
+            transition: width 1s 0.5s;
+        }
+
+       .topBarLeftLogo{
+        background-color: dodgerblue;
+
+       }
+       .topBarRightBox{
+        background-color: pink;
+       }
+
+       .middleLeft{
+        background-color: dodgerblue;
+        flex-grow: 1;
+        width: 100px;
+       }
+       .middle{
+        background-color: pink;
+        flex-grow: 4;
+       }
+
+       .mainContent{
+           height: 90%;
+           display: flex;
+           flex-wrap: wrap;
+       }
+
+    </style>
+</head>
+<body>
+    <header class="topBar">
+        <div class="topBarLeftLogo" >Top Bar Left Logo</div>
+        <div class="topBarCenter">
+            <ul>
+                <li><a class="topBarLinks" href="#">Home</a></li>
+                <li><a class="topBarLinks" href="#">Faculty</a></li>
+                <li><a class="topBarLinks" href="#">Admission</a></li>
+            </ul>
+        </div>
+        <div class="topBarRightBox">Top Bar Right Box</div>
+    </header>
+    <section class="mainContent">
+            <div class="middleLeft">
+                Left Section
+            </div>
+            <div class="middle">
+                Middle Section
+            </div>
+      
+    </section>
+</body>
+</html>
