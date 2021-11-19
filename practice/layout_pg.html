@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts - Positioning</title>
+    <style>
+        html,
+        body {
+            font-size: 20px;
+            height: 99%
+        }
+
+        .container {
+            background-color: lightblue;
+            margin: 10px 0px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 50px;
+            padding: 10px;
+            border-radius: 5px;
+            border-color: aqua;
+            float: left;
+        }
+
+        header {
+            background-color: crimson;
+            height: 70px;
+        }
+
+        ul {
+            padding: 0;
+            margin: auto;
+            padding-top: 20px;
+            width: 400px;
+        }
+
+        li {
+            list-style-type: none;
+            display: inline;
+        }
+
+        .logolink {
+            color: white;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-bottom: 2px solid royalblue;
+            margin-right: 10px;
+
+        }
+
+        .left-section
+        {
+            float: left;
+            width: 30%;
+            border: 4px solid gray;
+            margin-left: 10px;
+            padding: 5px;
+        }
+        .middle-section
+        {
+            float: left;
+            width: 70%;
+            border: 4px solid gray;
+            margin-left: 10px;
+            padding: 5px;
+        }
+
+        .column-3{
+            width: 30%;
+            height: fit-content;
+            border: white 1px solid;
+            font-size: 1.05em;
+            float:left;
+            margin: 5px;
+            
+        }
+
+    </style>
+</head>
+<body class="container">
+    <header>
+        <nav>
+            <img class="logo" src="../images/school_logo.jfif" alt="Bangalore School">
+            <ul>
+                <li>
+                    <a class="logolink" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="logolink" href="#">Page1</a>
+                </li>
+                <li>
+                    <a class="logolink" href="#">Page2</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div >
+        <h3 class="tcs pt10">Three Column Section</h3>
+        <div class="column-3">The primary cause of monsoons lies in different warming trends over land and sea, though other factors may be involved. Seasonal changes in temperature are large over land but small over ocean waters, and monsoons blow from atmospheric heat sinks (that is, cold regions with high atmospheric pressure) toward heat sources (warm regions characterized by low atmospheric pressure). </div>
+        <div class="column-3">The primary cause of monsoons lies in different warming trends over land and sea, though other factors may be involved. Seasonal changes in temperature are large over land but small over ocean waters, and monsoons blow from atmospheric heat sinks (that is, cold regions with high atmospheric pressure) toward heat sources (warm regions characterized by low atmospheric pressure). </div>
+        <div class="column-3">The primary cause of monsoons lies in different warming trends over land and sea, though other factors may be involved. Seasonal changes in temperature are large over land but small over ocean waters, and monsoons blow from atmospheric heat sinks (that is, cold regions with high atmospheric pressure) toward heat sources (warm regions characterized by low atmospheric pressure). </div>
+    </div>
+    
+
+
+   
+    
+</body>
+
+</html>

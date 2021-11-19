@@ -1,41 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sports Club</title>
     <style>
-        body{
+        body {
             background-color: pink;
-        }
-        .container{
-            padding: 20px;
+            margin: 0;
         }
 
-        td{
+        header{
+            padding: 5px;
+            background-color: bisque;
+        }
+
+        .container {
             padding: 5px;
         }
 
-        table
-        {
+        td {
+            padding: 5px;
+        }
+
+        table {
             /* outline: 10px inset white; */
             padding: 10px;
             border: 3px solid gray;
             border-radius: 5px;
         }
+
+        .fr {
+            float: right;
+        }
+
+        .info {
+            display: none;
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            background:lightcoral;
+            color: black;
+            border-radius: 5px;
+            width: 300px;
+            padding: 15px;
+        }
+
+        i.fas:hover+.info {
+            display: block;
+            animation-name: expandout;
+            animation-duration: 1s;
+        }
+
+        .info:hover {
+            display: block;
+        }
+
+        @keyframes expandout {
+            from {
+                width: 150px;
+            }
+            to {
+                width: 300px;
+            }
+        }
+
+        ul{
+            padding: 0 20px;
+            
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <h1>SPORTS CLUB</h1>
+    <header>
+        <label>SPORTS CLUB</label>
+        <span style="position: absolute;right: 20px;">
+            <i class="fr fas fa-question-circle"></i>
+            <div class="info">
+                <label>To Do:</label>
+                <ul>
+                    <li>Ensure User Input data before hitting "Submit"</li>
+                    <li>On click of Submit, show all data below in a grid</li>
+                </ul>
+            </div>
+        </span>
+    </header>
     <div class="container">
+        <form action="/">
         <table>
             <tr>
                 <td>
                     <label for="name">Student Name</label>
                 </td>
                 <td>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
                 </td>
             </tr>
             <tr>
@@ -68,7 +132,8 @@
                 </td>
             </tr>
         </table>
-        
-    </div>    
+    </form>
+    </div>
 </body>
+
 </html>

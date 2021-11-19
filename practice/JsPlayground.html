@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Sample</title>
+    <style>
+        #divResult {
+            margin-top: 30px;
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        tr:nth-child(even)
+        {
+            background-color: aqua;
+        }
+        tr:nth-child(odd)
+        {
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <label for="txtPolicyNumber">Policy Number</label>
+    <input name="txtPolicyNumber"  id="txtPolicyNumber" type="text">
+    <button onclick="showResult()" >Search</button>
+    <button onclick="onReset()" >Reset</button>
+    <div id="divResult" style="display: none;">
+        <table>
+            <tr>
+                <td>Policy12345</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Policy12345</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Policy12345</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Policy12345</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Policy12345</td>
+                <td>Active</td>
+            </tr>
+            <tr>
+                <td>Policy12345</td>
+                <td>Active</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
+<script>
+ function showResult(){
+     console.log("showResult called");
+     var mydiv = document.getElementById("divResult");
+     mydiv.style.display = "block";
+ }
+
+ function onReset(){
+    var mydiv = document.getElementById("divResult");
+    mydiv.style.display = "none";
+    document.getElementById("txtPolicyNumber").value = "";
+ }
+
+</script>
