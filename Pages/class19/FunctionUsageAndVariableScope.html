@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Usage And Variable Scope</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+//Scope of the Variables
+
+//global scope
+let globalVariable = "test";
+
+function sample()
+{
+    //local scope
+    let localVariable = "mike";
+    console.log(localVariable);
+}
+
+console.log(globalVariable);
+sample();
+
+
+
+
+
+
+
+    //need assignments on datatypes, 
+    //string concats, array manipulation, 
+    //functions declaration & usage
+    //string method assignment
+    //naming style assignment let FRUITNAME = ''; //allcaps, 
+    //naming style assignment let fruitName = ''; //camelcasing,
+    //naming style assignment let FruitName = ''; //pascalcasing,
+    //control based flow using function
+//datatype
+// Number, Array, String, Object
+// let, var(html4 & before), const
+//let v/s var
+
+/*
+//this is how you declare a function name 'simple'
+function simple()
+{
+}
+*/
+
+/*
+let fruitName = '';
+let fruits = new Array(); //old style
+let fruitCount = 0; //new style
+
+function addFruits(nameOfFruit)
+{
+    if(nameOfFruit.indexOf("a") != -1)
+    {
+        fruits.push(nameOfFruit);
+        fruitCount++;
+        console.log(`Item Added: "${nameOfFruit.toUpperCase()}", Counter : ${fruitCount}`);
+    }
+    return "hello";
+}
+
+
+let msg = addFruits("kiwi");
+console.log(msg);
+*/
+
+
+// addFruits("kiwi");
+// addFruits("banana");
+// addFruits("orange");
+// addFruits("pineapple");
+
+
+
+</script>
