@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 22</title>
+</head>
+<body>
+    <h1>JS Concepts - 2</h1>
+    <ol>
+        <li>Hoisting</li>
+        <li>Variable - Hoisting</li>
+    </ol>
+</body>
+</html>
+<script>
+    var addr = "local";  //scope: window (global)
+    let age = 10; //scope: block
+    console.log(window.age);
+    console.log(window.addr);
+
+    if(addr == "local")
+    {
+        let pass = true;
+        console.log(pass);
+    }
+
+    // below code: throw error
+    //console.log(pass);
+    
+    // below code: throw error
+    // timer = 9;
+    // console.log(timer);
+    // let timer;
+
+    counter = 1;
+    console.log(counter);
+    console.log(j);
+    var counter, j = 11;
+
+    //Function - Hoisting
+    let l = console.log;
+    test();
+
+    function test()
+    {
+        l("function 'test' is called");
+    }
+   
+</script>

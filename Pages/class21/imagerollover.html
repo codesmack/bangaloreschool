@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Rollover</title>
+    <style>
+        img,
+        .imgContainer,
+        .forestContent,
+        #text {
+            height: 350px;
+            width: 450px;
+        }
+
+        .imgContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+
+        }
+
+        #text {
+            background-color: thistle;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Image Rollover using Javascript</h1>
+    <ul>
+        <li>Image Rollover by Text</li>
+        <li>Image Rollover by Image</li>
+    </ul>
+    <p>
+    <h3>Image Rollover by Text</h3>
+    <div id="imgContainer" class="imgContainer">
+        <div id="img">
+            <img id="imgForest" src='fox.webp' alt="Forest">
+        </div>
+        <div id="text" style="display: none;">
+            <h1>Welcome to the Jungle Tour..</h1>
+        </div>
+        <div id="final" style="display: none;">
+            <img src="complete.jpg" alt="booking complete">
+        </div>
+    </div>
+    </p>
+</body>
+
+</html>
+<script>
+    let imgContainer = document.getElementById("imgContainer");
+    let img = document.getElementById("img");
+    let text = document.getElementById("text");
+    let final = document.getElementById("final");
+
+    img.addEventListener("mouseover", nextContent);
+    text.addEventListener("mouseout", showFox);
+    imgContainer.addEventListener("click", showBooking);
+
+    function nextContent() {
+        console.log("mouseover");
+        if (final.style.display == "none") {
+            img.style.display = "none";
+            text.style.display = "block";
+        }
+    }
+
+    function showFox() {
+        console.log("mouseout");
+        if (final.style.display == "none") {
+            img.style.display = "block";
+            text.style.display = "none";
+        }
+    }
+
+    function showBooking() {
+        console.log("click");
+        final.style.display = "block";
+        text.style.display = "none";
+    }
+
+
+</script>

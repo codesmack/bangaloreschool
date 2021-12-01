@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+<body>
+    <h1>HTML Storage</h1>
+    <ul>
+        <li>cookie</li>
+        <li>localStorage</li>
+        <li>sessionStorage</li>
+    </ul>
+</body>
+</html>
+<script>
+    window.document.cookie = "authenticated=true;max-age=10000000000;";
+
+    window.localStorage.setItem("id","2");
+    window.localStorage.setItem("name","mike");
+    window.localStorage.removeItem("name");
+
+    window.sessionStorage.setItem("id","2");
+    window.sessionStorage.setItem("name","mike");
+    window.sessionStorage.removeItem("id");
+
+    // window.localStorage.clear();
+    // window.sessionStorage.clear();
+    // window.document.cookie = "authenticated=false";
+
+</script>

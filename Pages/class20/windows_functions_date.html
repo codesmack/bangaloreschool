@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>windows - functions & date</title>
+</head>
+<body>
+    <h1>windows - functions & date</h1>
+    <h2>setTimeout</h2>
+    <p id="info" style="background-color: bisque;">
+
+    </p>
+    <ul>
+        <li>
+            setTimeout(funcName,milliseconds);
+        </li>
+    </ul>
+    <button id="btnClearTimer">Clear Timer </button>
+</body>
+</html>
+<script>
+
+let min = 0;
+let myRecurringTimer = window.setInterval(minAdd, 1000);
+
+function minAdd()
+{
+    min++;
+    console.log(min);
+
+    if(min == 10)
+    {
+        window.clearInterval(myRecurringTimer);
+        console.log('time is up!');
+
+        //show popup
+        window.location.pathname = '/pages/login1.html';
+    }
+}
+
+
+
+
+let myPromoTimer = setTimeout(addPromo, 5000);
+
+function addPromo()
+{
+    document.getElementById("info").innerText = "Today: 50% off";
+}
+
+document.getElementById("btnClearTimer").addEventListener("click", clearTimer);
+
+function clearTimer()
+{
+    //dismiss timer
+    window.clearTimeout(myPromoTimer);
+    myPromoTimer = setTimeout(addPromo, 5000);
+}
+
+
+</script>

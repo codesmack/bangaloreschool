@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 20</title>
+    <h1>Class 20</h1>
+    <a style="display: none;"
+    href="/practice/class19/FunctionUsageAndVariableScope.html">
+    Class 19
+    </a>
+<p>
+    userName: <input type="text" id="username"> <br><br><br>
+    pwd: <input type="password" name="" id=""><br><br><br>
+    <button id="btnLogin">Login</button>
+</p>
+
+
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+console.log(`Screen Size : ${window.screen.width} 
+* ${window.screen.height}` );
+console.log(`Location : ${window.location.pathname} ` );
+
+document.getElementById("btnLogin")
+.addEventListener('click', onLoginClick);
+
+
+function onLoginClick()
+{
+    let username = document.getElementById("username").value;
+    document.cookie = `name=${username};max-age=${5}`;
+}
+
+</script>

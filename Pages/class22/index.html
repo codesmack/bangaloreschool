@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 22</title>
+</head>
+<body>
+    <h1>JS - Function Concepts - 1</h1>
+    <ul>
+        <li>callback functions</li>
+        <li>Arrow function</li>
+        <li>Function as a parameter</li>
+        
+    </ul>
+    <button onclick="javascript:setTimeout(callbackFunction, 5000);">Submit</button>
+</body>
+</html>
+<script>
+    function orderPizza(satishPartOfFive, waitTime)
+    {
+        //some time consuming work
+        for (let index = 0; index < waitTime; index++) {
+            console.log("Waiting " + index);
+        }
+
+        console.log("Wait Over. Pizza ready!");
+
+        //work done.
+        //fire the callback
+        //call 'satishPartOfFive'
+        satishPartOfFive();
+
+    }
+
+    function thiruPartOfOne()
+    {
+        console.log("thiruPartOfOne is here!!");
+    }
+
+
+    function tamilPartOfTwo()
+    {
+        console.log("Tamil Sir is here!!");
+    }
+
+    function satishPartOfFive()
+    {
+        console.log("Plz enjoy!!");
+    }
+
+    orderPizza(satishPartOfFive, 10000);
+    orderPizza(tamilPartOfTwo, 500);
+    orderPizza(thiruPartOfOne, 100);
+
+
+    function mathItUp(mathTypeFunc, n1, n2)
+{
+    let output = mathTypeFunc(n1, n2);
+    console.log("Your Output :" + output);
+}
+
+function Addition(n1, n2)
+{
+    console.log("Add : " + (n1+n2));
+    return (n1+n2);
+}
+
+mathItUp(Addition, 10, 9);
+   //Arrow function
+setTimeout(() =>
+{
+    console.log("onload settimeout called");
+}, 5000);
+
+</script>
+
+

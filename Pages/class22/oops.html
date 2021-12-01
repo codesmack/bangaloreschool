@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 22</title>
+</head>
+<body>
+    <ol>
+        <li>
+            this - Context Based Instance
+        </li>
+    </ol>
+</body>
+</html>
+<script>
+String.prototype.desc = "sathya";
+String.prototype.sathya_wakeup = function(){
+    return "sathya wakeup";
+}
+
+console.log(String.prototype);
+// console.log(new String().desc);
+// console.log(new String().sathya_wakeup());
+
+let stringObject = "this is a string data";
+console.log(stringObject.sathya_wakeup());
+// console.log(new String().sathya_wakeup());
+
+
+
+
+    // this.name // this - window object
+
+    //function declaration
+    function Person(name)
+    {
+        // this - person function object
+        this.name = name.toUpperCase();
+        this.greet = function(){
+            //console.log("hello, " + name);
+            console.log("hello, " + this.name);
+            
+        }
+    }
+
+    // let p1 = new Person("mike");
+    // p1.greet();
+
+
+function startUp()
+{
+    this.title = "Startup v10";
+    this.show = function(){
+        console.log('show');
+    }
+}
+// console.log(new startUp().title);
+// startUp.prototype.description = "This is a description";
+// console.log(new startUp().description);
+
+
+
+// let p4 = Object.create(startUp);
+// console.log(p4);
+
+    // let p3 = new Object();
+    // p3.title = "Startup";
+    // p3.show = function(){
+    //     console.log('show');
+    // }
+    // console.log(p3);
+    // let p2 = new Person("sam");
+    // p2.greet();
+</script>

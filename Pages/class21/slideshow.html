@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightcoral;
+        }
+
+        img {
+            width: 650px;
+            height: 400px;
+        }
+
+        #btnNext {
+            margin-left: 10px;
+        }
+
+        #btnNext i {
+            color: white;
+            font-size: 32px;
+            cursor: pointer;
+            transition: transform 0.3s;
+
+        }
+
+        #btnNext i:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1>Slideshow using JS</h1>
+    <div class="container">
+        <div class="imgContainer">
+            <img id="imgSlide" src="https://cdn.pixabay.com/photo/2021/08/26/15/39/cat-6576397__340.jpg" alt="">
+        </div>
+        <div>
+            <span id="btnNext">
+                <i class="fas fa-arrow-circle-right"></i>
+            </span>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let imagesSrc = [], imgIndex = 0;
+    imagesSrc.push('https://cdn.pixabay.com/photo/2021/08/26/15/39/cat-6576397__340.jpg');
+    imagesSrc.push('https://cdn.pixabay.com/photo/2021/09/17/10/55/caiman-lizard-6632344__340.jpg');
+    imagesSrc.push('https://cdn.pixabay.com/photo/2016/07/15/15/55/dachshund-1519374__340.jpg')
+    imagesSrc.push('https://cdn.pixabay.com/photo/2021/11/15/05/52/red-fox-6796430_960_720.jpg');
+
+    let imgSlide = document.getElementById("imgSlide");
+    let btnNext = document.getElementById("btnNext");
+    btnNext.addEventListener("click", showNext);
+
+    function showNext() {
+        imgIndex++;
+        if (imgIndex > imagesSrc.length - 1)
+            imgIndex = 0;
+        imgSlide.src = imagesSrc[imgIndex];
+    }
+</script>
+
+
+<script>
+
+</script>
