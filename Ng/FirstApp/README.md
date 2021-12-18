@@ -1,27 +1,24 @@
-# FirstApp
+# Steps to run the app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.13.
+1. Download this folder
+2. Go to Cmd > cd "folder_where_your_downloaded_code"
+3. dir 
+//You will observer no "node_module" folder in the list from steps #3
 
-## Development server
+//Let's install the "node_module"
+4. npm install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+//after the installation is done. check "node_module" folder is created or not?
 
-## Code scaffolding
+//Lets run the app
+5. ng serve --open
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+//If you see green compilation, browser should open with the app on http://localhost:4200
 
-## Build
+//If you see green compilation, but no browser open??
+//open browser manually and run http://localhost:4200
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Note
+Do not use "Live server" for firing the page
+Do not close the command propmt where you fired the command "ng serve --open". Thats Angular Live Server that helps in auto compilation.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
