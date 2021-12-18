@@ -1,6 +1,6 @@
 # Steps to run the app
 
-1. Download this folder
+1. Download this folder "FirstApp"
 2. Go to Cmd > cd "folder_where_your_downloaded_code"
 3. dir 
 ### You will observer no "node_module" folder in the list from steps #3
