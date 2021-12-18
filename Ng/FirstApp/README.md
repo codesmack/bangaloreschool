@@ -3,9 +3,10 @@
 1. Download this folder "FirstApp"
 2. Go to Cmd > <code>cd "folder_where_your_downloaded_code"</code>
 3. <code>dir</code>
-### You will observer no "node_module" folder in the list from steps #3
-
-### Let's install the "node_module"
+  <ul>
+  <li>You will observer no "node_module" folder in the output directory listing from steps #3</li>
+  <li>Let's install the "node_module"</li>
+  </ul>
 4. <code>npm install</code>
 
   <ul>
@@ -23,6 +24,8 @@
 open browser manually and run http://localhost:4200</li>
 <ul>
 <p>
+
+  
 ## Note
 1. Do not use "Live server" for firing the page
 2. Do not close the command propmt where you fired the command "ng serve --open". Thats Angular Live Server that helps in auto compilation.
