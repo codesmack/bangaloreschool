@@ -9,12 +9,12 @@
 
 ### command prompt should show the output
 <pre>
-<code>
+<output>
 Welcome to the Restaurant!
 menu id: 20
 menu type: chinese
 Welcome to the Restaurant!
 menu id: 10
 menu type: south
-</code>
+</output>
 </pre>
