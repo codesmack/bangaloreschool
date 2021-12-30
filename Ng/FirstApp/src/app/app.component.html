@@ -1,26 +1,13 @@
-<h1>Hello, {{ fullName }}</h1>
-<table>
-  <tr>
-      <td>
-          <label>UserName</label> 
-      </td>
-      <td>
-          <input id="txtUserName"
-           [type]="txtType" value="">
-        
-         <label >*</label>
-      </td>
-  </tr>
-  <tr>
-      <td>Password </td>
-      <td>
-          <input type="password">
-      </td>
-  </tr>
-  <tr>
-      <td> </td>
-      <td>
-          <button>Submit</button>
-      </td>
-  </tr>
-</table>
+<h1 bigHeading>Welcome to AppComponent</h1>
+<users  bigHeading></users>
+<admission  *ngIf="showAdmission"></admission>
+<div>
+    <h1>
+        {{title}}
+    </h1>
+    <label [style.margin]="marginLeft">Name : </label>
+    <input [(ngModel)]="userName" (change)="onNameChange()" type="text">
+    <p>
+        Your name: {{userName}}
+    </p>
+</div>
