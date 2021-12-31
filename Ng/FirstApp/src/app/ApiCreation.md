@@ -1,3 +1,4 @@
+# How to create api using express 
 <ul>
 <li>md customapi</li>
 <li>cd customapi
@@ -21,3 +22,7 @@ app.listen(port, () => {
 <li> Use below command to run the api
 <li> node index.js  
 </ul>
+
+
+# How to install Mysql2 npm package
+Follow instructions at https://www.npmjs.com/package/mysql2
