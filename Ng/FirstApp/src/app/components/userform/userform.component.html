@@ -1,0 +1,84 @@
+<div class="container mt-3">
+  <form #userForm="ngForm" class="row g-3" (ngSubmit)="SubmitForm(userForm)">
+    <div class="col-md-6">
+      <label class="form-label" for="firstname">First Name</label>
+      <input class="form-control required-border" required ngModel type="text" id="firstname" name="firstname">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label" for="lastname">Last Name</label>
+      <input class="form-control required-border" required ngModel type="text" id="lastname" name="lastname">
+    </div>
+    <div class="col-6">
+      <label class="form-label" for="email">Email </label>
+      <input class="form-control required-border" required ngModel type="text" id="email" name="email">
+    </div>
+    <div class="col-6">
+      <label class="form-label" for="country">Country</label>
+      <select class="form-select" ngModel name="country" id="country">
+        <option  value="0">-- Select a Country --</option>
+        <option [ngValue]="c.id" *ngFor="let c of countryList">
+          {{c.name}}
+        </option>
+      </select>
+    </div>
+    <div class="col-6">
+      <label class="form-label me-3" for="gender">Gender</label>
+      <div>
+        <div class="form-check form-check-inline mr-3">
+          <input class="form-check-input " type="radio" name="gender" id="male">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Male
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="gender" id="female">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Female
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <label class="form-label" for="gender">Married</label>
+      <div>
+          <input class="form-check-input form-check-inline" type="checkbox" value="" id="flexCheckDefault">
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
+<div class="container">
+  <h2>User Data</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr class="table-primary">
+        <th scope="col">{{"first name" | titlecase }}</th>
+        <th scope="col">{{"last name" | titlecase }}</th>
+        <th scope="col">Commission</th>
+        <th scope="col">Price</th>
+        <th scope="col">Created On</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>
+          {{user.fname | uppercase }}
+        </td>
+        <td>
+          {{user.lname | lowercase}}
+        </td>
+        <td>
+          {{user.commision | number:'1.1-1'}}
+        </td>
+        <td>
+          {{user.price | currency: 'INR'}}
+        </td>
+        <td>
+          {{user.createdOn | date: 'M/d/yy, h:mm a'}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

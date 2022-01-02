@@ -17,7 +17,7 @@ import { AboutComponent } from './class31/about/about.component';
 import { ContactComponent } from './class31/contact/contact.component';
 import { RouterModule } from '@angular/router';
 import { WelcomeComponent } from './class31/welcome/welcome.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +47,8 @@ import { WelcomeComponent } from './class31/welcome/welcome.component';
         { path: "contact", component: ContactComponent },
         { path: "welcome", component: WelcomeComponent }
       ]
-    )
+    ),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [StartComponent]

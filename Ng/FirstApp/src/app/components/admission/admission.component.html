@@ -1,0 +1,19 @@
+<h1 [ngClass]="age > 10 ? 'active' : 'inactive'">
+    Admission Form
+</h1>
+
+<input type="color" [(ngModel)]="paraColor">
+<p [ngStyle]="{ color: paraColor }">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum laudantium corrupti, inventore necessitatibus soluta molestias odit officia harum vel ipsa quas enim illum, ducimus dolorem. Enim sunt perspiciatis quaerat quod?
+</p>
+<ul>
+    <li *ngFor="let userName of names">
+        <users [name]="userName"></users>
+    </li>
+</ul>
+
+<ul [ngSwitch]="age">
+    <li *ngSwitchCase="20" >Hockey</li>
+    <li *ngSwitchCase="30">Carrom</li>
+    <li *ngSwitchDefault>Watch TV</li>
+</ul>

@@ -1,0 +1,13 @@
+<div class="container">
+    <h1 class="mb-4">User Info</h1>
+
+    <p>
+        Search <input class="me-3" type="search"> <button class="btn-sm btn btn-info"
+            (click)="onSearchClicked()">Search</button>
+    </p>
+    <div *ngIf="searchClicked">
+       <app-second [datasource]="userInfos"
+        (clear)="onClearFired($event)" ></app-second>
+    </div>
+
+</div>
